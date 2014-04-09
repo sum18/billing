@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/* SERVICE WORKS UI - CSS Document */
+
+	/* defines all UBS styles and rules */
+	@import 'global.css';
+
+
+	/*
+	TIP: 
+	Background: #f0f0f0
+	Text: #2e2e2e
+	Gray: #949494
+	Light Gray: #d7d7d7
+	Blue: #556996
+	Light Blue: #a5b9d1
+	Dark Blue: #21354F
+	Red?: #d5600a
+	Alert Red: #e54e4b
+	Orange: #D5600A
+	Yellow: #FDF2D3;
+	Pale Yellow: #FFFAF0
+	Dull yello: #eeebe2;
+	Black: #0F0E0F;
+	
+	*/
+
+/****************** GLOBAL ************************/
+
+body {
+	background: #f0f0f0 url('../images/topnav-background.png') repeat-x 0 0;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #2e2e2e;
+	padding-top: 42px;
+}
+
+div.layout-978 {
+	min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -52px; 
+  overflow: hidden;
+}
+
+div.layout-978:after {
+  content: "";
+  display: block;
+  /* .push must be the same height as footer */
+  height: 52px; 
+}
+
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+
+h4 {
+	font-size:10px;
+	color:#949494;
+	margin: 0;
+}
+
+textarea { 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; /* future proofing */
+	-khtml-border-radius: 3px; /* for old Konqueror browsers */
+	border: 1px solid #C9C9C9;
+	-moz-box-shadow: inset 0px 0px 4px rgba(68,68,68,0.3);
+	-webkit-box-shadow: inset 0px 0px 4px rgba(68,68,68,0.3);
+	box-shadow: inset 0px 0px 4px rgba(68,68,68,0.3);
+	width: 100%;
+	
+}
+
+input {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+	
+
+
+[class*="icon-"] { margin-right: 4px; }
+
+
+
+
+/**************************************************
+						 $start
+**************************************************/
+
+.titlebar { 
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #D7D7D7;
+    border-top: 1px solid #D7D7D7;
+    height: 68px;
+    position: relative;
+}
+
+.titlebar h1 {
+	color: #556996;
+    padding: 24px 0 24px 12px;
+    font-size: 24px;
+}
+
+.main-content {
+	background: url('../images/v-sep.png') no-repeat 726px 0;
+	overflow: auto;
+}
+
+.faid, .plantype { position: relative;}
+.faid:before, .plantype:before { 
+	color: #949494;
+	font-size: 9px;
+	padding-right: 4px;
+}
+
+.faid:before { content: "FAID:"; }
+.plantype:before { content: "Plan Type:"; }
+
+
+/**************************************************
+						 $engagement 
+**************************************************/
+
+div.engagement {
+	padding: 18px;
+	border: 1px solid #c0c0c0;
+	margin: 20px auto;
+	background: url('../images/splitter.png') repeat-x 0 206px #fff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px; /* future proofing */
+	-khtml-border-radius: 4px; /* for old Konqueror browsers */
+
+	width: 93%;	
+}
+
+.shadow {
+  -moz-box-shadow:    0 0 3px 0 #ccc;
+  -webkit-box-shadow: 0 0 3px 0 #ccc;
+  box-shadow:         0 0 3px 0 #ccc;
+}
+
+ul.bio { 
+	margin: 0 auto 12px auto; 
+}
+
+ul.bio li {
+	display: inline;
+	padding-right: 12px;
+	font-weight: bold;
+}
+
+.engagement .dash {
+	background: url('../images/dash-bg.png') no-repeat #556996;
+	
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; /* future proofing */
+	-khtml-border-radius: 3px; /* for old Konqueror browsers */
+	color: #fff;
+	height: 120px;
+}
+
+.countdown{
+	width: 160px;
+	height: 96px;
+	padding: 24px 0 0 8px;
+	float: left;
+	margin-right: 12px;
+	background: url('../images/countdown-line.png') no-repeat 160px 8px;
+
+}
+
+.countdown h1 {
+	color: #fff;
+	font-size: 36px;
+	text-align:center;
+	margin-bottom: 16px;
+	padding-right: 14px;
+}
+
+.status h1, .countdown h1  {
+	text-shadow: 1px 1px 1px #2e2e2e;
+	filter: Shadow(Color=#2e2e2e, Direction=45, Strength=1);
+	position: relative;
+}
+
+.countdown h1:after {
+	content: "DAYS";
+	font-size: 14px;
+	text-shadow: none;
+	position: absolute;
+	top: 40px;
+	left: 55px;
+}
+
+.countdown p, .countdown p.interrupt {
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;	
+	margin-right: 14px;
+	padding: 0 6px 0 0;
+}
+
+.countdown p.interrupt {
+	color: #ffdf4b;
+}
+
+.countdown p.delivered {
+	color: #8ed037;
+	padding-top: 12px;
+	font-size: 16px;
+}
+
+.countdown p.interrupt span {
+	color: #d2e0f0;
+}
+
+.countdown p.interrupt span, .countdown p.delivered span  {
+	font-size: 18px;
+	display: block;
+	margin-bottom: 8px;
+}
+
+.postit{
+	width: 160px;
+	height: 90px;
+	padding: 50px 0 0 8px;
+	float: left;
+	margin-right: 12px;
+	background: url('../images/post-it.png') no-repeat 10px 10px;
+}
+
+.overdue {
+	color: #d5600a;
+	padding: 2px 6px;
+	border: 2px solid #d5600a;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	margin-left: 16px;
+}
+
+
+
+.status {
+	width: 250px;
+	padding: 18px 0 0 18px;
+	float: left;
+	background: url('../images/status-line.png') no-repeat 0 54px;
+}
+
+.status h1 { 
+	font-size: 18px;
+	padding-top: 10px;
+	margin-bottom:  12px;
+}
+
+.status h1:after {
+	content: "ENGAGEMENT STATUS";
+	font-size: 9px;
+	color:#d2e0f0;
+	text-shadow: none;
+	position: absolute;
+  	top: 0;
+  	left: 0;
+}
+
+.tracking, .sa-date {
+	font-size: 13px;
+	font-weight: bold;	
+}
+
+.tracking:before {
+	content: "Tracking Acct #:";
+	padding-right: 6px;
+	font-size: 10px;
+	color:#d2e0f0;
+}
+
+.sa-date { 
+	display: block;
+	margin-top: 4px;
+}
+
+.sa-date:before {
+	content: "Original SA date:";
+	padding-right: 6px;
+	font-size: 10px;
+	color:#d2e0f0;
+}
+
+.type {
+	font-weight: bold;
+	color: #21354F;
+	background: #fff;
+	padding: 1px 6px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px; /* future proofing */
+	-khtml-border-radius: 2px; /* for old Konqueror browsers */
+	border: 1px solid #21354f;
+	margin-left: 8px;
+}
+
+.fee-summary {
+	width: 217px;
+	height: 120px;
+	color: #2e2e2e;
+	float: left;
+	background: url('../images/fee-ledger.png') no-repeat 0 8px;
+	height
+
+}
+
+.fee-summary table {
+	margin: 54px 0 0 150px;
+}
+
+.h-tabs {
+	margin-top: 24px; 
+}
+
+.tab-content-container {
+	margin-top: 20px;
+}
+
+.tab-content-container .countdown, 
+.tab-content-container .countdown h1 {
+	color: #21354F;
+}
+

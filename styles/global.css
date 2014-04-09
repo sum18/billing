@@ -1,0 +1,725 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/***************************************************************************** 
+These are styles that are repeated throughout the designs for :
+WMF-IR, BMSS and Service Works and Finacial Planing & Billing
+******************************************************************************/
+
+/* Imports */
+
+	@import 'grids/978gs.css';
+	@import 'elements/buttons.css';
+	@import 'elements/selectbox.css';
+	@import 'collections/tables.css';
+	@import 'collections/menus.css';
+	@import 'collections/filters.css';
+	@import 'collections/searchbox.css';
+	@import 'dropkick.css';
+	
+	
+
+
+/* Global Stuff */
+
+
+* { margin: 0;}
+html, body { height: 100%;}
+body { cursor: default;}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th { text-align:left; }
+
+hr { 
+	border: 0; 
+	height: 0; 
+	border-top: 1px solid #ccc; 
+	border-bottom: 1px solid #fff;
+}
+
+img {  border:none; }
+
+a { text-decoration: none; }
+a:hover { cursor: pointer; }
+
+a.close { padding: 4px 6px; }
+a.close:hover {
+	background:#ccc;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+a.close:active { margin-top: 1px;}
+.editable { cursor:auto; }
+.right { float: right;}
+
+.test {
+	
+	background-color:#FCC;	
+
+}
+.hide { display:none; }
+
+
+/* Fonts */
+
+.label {
+	color:#949494;
+	font-size:10px;
+	font-weight: normal;
+}
+.bold { font-weight: bold }
+
+.label:hover {
+	text-decoration: none !important;
+	cursor: default !important;
+}
+
+.cash { text-align: right;}
+.total { font-weight: bold;}
+
+.blu { color: #556996;}
+.light-blu { color: #a5b9d1;}
+
+
+
+
+/* Dropdowns */
+
+.dropdown {
+		   border: 1px solid #DDD;
+		   border-radius: 3px;
+		   text-shadow: 0 1px 1px white;
+		   -webkit-box-shadow: 0 1px 1px #fff;
+		   -moz-box-shadow:    0 1px 1px #fff;
+		   box-shadow:         0 1px 1px #fff;
+		   font: bold 11px Sans-Serif;
+		   padding: 6px 10px;
+		   white-space: nowrap;
+		   vertical-align: middle;
+		   color: #556996;
+		   background: transparent;
+		   cursor: pointer;
+}
+
+.dropdown:hover, .dropdown:focus {
+		   border-color: #556996;
+		   background: -webkit-linear-gradient(top, white, #E0E0E0);
+		   background:    -moz-linear-gradient(top, white, #E0E0E0);
+		   background:     -ms-linear-gradient(top, white, #E0E0E0);
+		   background:      -o-linear-gradient(top, white, #E0E0E0);
+		   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;
+		   -moz-box-shadow:    0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;
+		   box-shadow:         0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;
+}
+
+.dropdown:active {
+		   border: 1px solid #aaa;
+		   border-bottom-color: #ccc;
+		   border-top-color: #999;
+		   -webkit-box-shadow: inset 0 1px 2px #aaa;
+		   -moz-box-shadow:    inset 0 1px 2px #aaa;
+		   box-shadow:         inset 0 1px 2px #aaa;
+		   background: -webkit-linear-gradient(top, #E6E6E6, gainsboro);
+		   background:    -moz-linear-gradient(top, #E6E6E6, gainsboro);
+		   background:     -ms-linear-gradient(top, #E6E6E6, gainsboro);
+		   background:      -o-linear-gradient(top, #E6E6E6, gainsboro);
+}
+
+.dropdown:after {
+		   content: "";
+		   display: inline-block;
+		   width: 0;
+		   height: 0;
+		   border-top: 4px solid #556996;
+		   border-left: 4px solid transparent;
+		   border-right: 4px solid transparent;
+		   margin: 0 0 0 4px;
+		   position: relative;
+		   top: -1px;
+}
+		
+.dropdown:hover:after {
+		   border-top-color: #556996;
+}
+
+.dropdown.primary {
+	color: #fff;
+	background: -moz-linear-gradient(top, #b3bfdb, #3c5da6);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #b3bfdb),color-stop(1, #3c5da6));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#b3bfdb', EndColorStr='#3c5da6');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#b3bfdb', EndColorStr='#3c5da6')";
+	text-shadow: none;
+	border: 1px solid #556996;
+}
+
+
+.dropdown.primary:after { border-top: 4px solid #fff; }
+
+.dropdown.primary:active {
+		   border: 1px solid #21354F;
+		   border-bottom-color: #21354F;
+		   border-top-color: #21354F;
+		   -webkit-box-shadow: inset 0 1px 2px #21354F;
+		   -moz-box-shadow:    inset 0 1px 2px #21354F;
+		   box-shadow:         inset 0 1px 2px #21354F;
+			background-image: -moz-linear-gradient(top, #3c5da6, #7384ab);
+			background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #7384ab),color-stop(1, #3c5da6));
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#7384ab', EndColorStr='#3c5da6');
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#7384ab', EndColorStr='#3c5da6')";
+}
+
+.sortable:after {
+			content: "";
+		   display: inline-block;
+		   width: 0;
+		   height: 0;
+		   border-top: 4px solid #556996;
+		   border-left: 4px solid transparent;
+		   border-right: 4px solid transparent;
+		   margin: 0 0 0 4px;
+		   position: relative;
+		   top: -1px;
+}
+
+.sortable:hover:after, .selected.sortable:after{
+
+		   border-top: 4px solid #fff;
+
+}
+
+
+/************ MENU **************/
+
+/* Flat dropdowns */
+
+.dropdown.flat {
+	background: #fafafa;
+	border: 1px solid #c2c2c4;
+}
+
+/* Checkboxes */	
+	
+input[type=checkbox].chkbox {
+	display:none;
+}
+
+input[type=checkbox].chkbox + label.chkbox-label {
+	padding-left:22px;
+	height:22px; 
+	display:inline-block;
+	line-height:15px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=checkbox].chkbox:checked + label.chkbox-label {
+	background-position: 0 -22px;
+}
+.chkbox-label{ background-image:url(../images/chk.png); }
+
+/* @ ButtonBar */
+
+.button-bar a.button {
+	padding: 6px 10px;
+	font-size: 11px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px; /* top left, top right, bottom right, bottom left */
+	color: #556996;
+	background: #fff;
+	background-image: -moz-linear-gradient(top, #ffffff, #d0d0d0); /* Firefox 3.6 */
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #d0d0d0),color-stop(1, #ffffff)); /* Safari & Chrome */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#d0d0d0')"; /* IE8 */
+	
+	text-shadow: none;
+	display:inline-block;
+		float: none;
+		margin:0;
+}
+
+.button-bar a.button.first {
+	-webkit-border-radius: 4px 0px 0px 4px;
+	-moz-border-radius: 4px 0px 0px 4px;
+	border-radius: 4px 0px 0px 4px; /* top left, top right, bottom right, bottom left */
+	border-right: none;
+}
+
+.button-bar a.button.last {
+	-webkit-border-radius: 4px 0px 0px 4px;
+	-moz-border-radius: 4px 0px 0px 4px;
+	border-radius: 0px 4px 4px 0px; /* top left, top right, bottom right, bottom left */
+	border-left: none;
+	
+}
+
+.button-bar a.button:hover {
+	background-image: -moz-linear-gradient(top, #b3bfdb, #3c5da6);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #b3bfdb),color-stop(1, #3c5da6));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#b3bfdb', EndColorStr='#3c5da6');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#b3bfdb', EndColorStr='#3c5da6')";
+	color: #fff;
+}
+
+.button-bar a.button:active, .button-bar a.button.selected {
+	background-image: -moz-linear-gradient(top, #3c5da6, #7384ab);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #7384ab),color-stop(1, #3c5da6));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#7384ab', EndColorStr='#3c5da6');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#7384ab', EndColorStr='#3c5da6')";
+	color: #fff;
+	border: 1px solid #21354F;
+
+}
+
+/* @end */
+
+
+
+
+
+
+
+
+/******* MODAL ***********************************/
+
+
+/* CONTAINERS 
+˹ˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉˉ˺
+*/
+
+.modal{
+	min-width:858px;
+	background:url(../images/modal-body-texture.png) repeat;
+	-moz-box-shadow:    0px 0px 2px 2px #2e2e2e;
+	 -webkit-box-shadow: 0px 0px 2px 2px #2e2e2e;
+	 box-shadow:         0px 0px 2px 2px #2e2e2e;
+	 -moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.modal .header, .modal .footer, .modal .body {
+	padding:12px;
+}
+
+.modal .header {
+	background:#FFF;
+	 -moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	border-bottom: #d7d7d7 1px solid;
+}  
+
+.modal .header h2, .dialog .header h2, .pop h2 {
+	font-size:12px;
+	font-weight:bold;
+	margin:0;
+	display:inline-block;
+}
+
+.modal .body {
+	border-top:#fff 1px solid;
+	border-bottom:#fff 1px solid;
+	
+}
+
+.modal .footer {
+	background:#FFF;
+	 -moz-border-radius:  0 0 4px 4px;
+	-webkit-border-radius:  0 0 4px 4px;
+	border-radius:  0 0 4px 4px;
+	border-top: #d7d7d7 1px solid;
+	overflow:auto;
+}  
+
+.modal div.right, .dialog div.right {
+	float:right;
+}
+
+
+.modal .left {
+	float:left;
+}
+
+
+.dialog, .pop{
+	background:url(../images/modal-body-texture.png) repeat;
+	-moz-box-shadow:    0px 0px 4px 4px #ccc;
+	 -webkit-box-shadow: 0px 0px 4px 4px #ccc;
+	 box-shadow:         0px 0px 4px 4px #ccc;
+	 -moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding:12px;
+	text-align:left;
+}
+
+.dialog div.header { 
+	background:none;
+	border-bottom: none;
+	padding: 0;
+	 }
+
+.dialog .body{
+	margin: 12px 0 20px 0;
+	
+}
+
+.dialog p.label{
+	color:#949494;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.dialog .footer, pop .footer { overflow:auto; }
+.dialog .footer div, pop .footer div  { float:left; margin-left: 8px; }
+
+
+
+
+
+
+
+/***********************ICONS***********************/
+
+@font-face {
+	font-family: 'UBS-Global-Icons';
+	src:url('../fonts/UBS-Global-Icons.eot');
+	src:url('../fonts/UBS-Global-Icons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/UBS-Global-Icons.ttf') format('truetype'),
+		url('../fonts/UBS-Global-Icons.woff') format('woff'),
+		url('../fonts/UBS-Global-Icons.svg#UBS-Global-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'UBS-Global-Icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check-alt:before {
+	content: "\e667";
+}
+.icon-pencil:before {
+	content: "\e637";
+}
+.icon-bullhorn:before {
+	content: "\e638";
+}
+.icon-user:before {
+	content: "\e636";
+}
+.icon-cog:before {
+	content: "\e60f";
+}
+.icon-pie:before {
+	content: "\e610";
+}
+.icon-stats:before {
+	content: "\e63a";
+}
+.icon-bars:before {
+	content: "\e639";
+}
+.icon-link:before {
+	content: "\e63c";
+}
+.icon-filter:before {
+	content: "\e64a";
+}
+.icon-out:before {
+	content: "\e615";
+}
+.icon-in:before {
+	content: "\e613";
+}
+.icon-in-alt:before {
+	content: "\e614";
+}
+.icon-home:before {
+	content: "\e60e";
+}
+.icon-light-bulb:before {
+	content: "\e611";
+}
+.icon-anchor:before {
+	content: "\e612";
+}
+.icon-feather:before {
+	content: "\e63d";
+}
+.icon-expand:before {
+	content: "\e634";
+}
+.icon-maximize:before {
+	content: "\e635";
+}
+.icon-search:before {
+	content: "\e600";
+}
+.icon-zoom-in:before {
+	content: "\e601";
+}
+.icon-zoom-out:before {
+	content: "\e602";
+}
+.icon-add:before {
+	content: "\e603";
+}
+.icon-subtract:before {
+	content: "\e604";
+}
+.icon-exclamation:before {
+	content: "\e605";
+}
+.icon-question:before {
+	content: "\e606";
+}
+.icon-close:before {
+	content: "\e607";
+}
+.icon-spinner:before {
+	content: "\e608";
+}
+.icon-play:before {
+	content: "\e616";
+}
+.icon-stop:before {
+	content: "\e617";
+}
+.icon-pause:before {
+	content: "\e618";
+}
+.icon-forward:before {
+	content: "\e619";
+}
+.icon-rewind:before {
+	content: "\e61a";
+}
+.icon-sound:before {
+	content: "\e630";
+}
+.icon-sound-alt:before {
+	content: "\e632";
+}
+.icon-sound-off:before {
+	content: "\e631";
+}
+.icon-task:before {
+	content: "\e629";
+}
+.icon-inbox:before {
+	content: "\e628";
+}
+.icon-envelope:before {
+	content: "\e627";
+}
+.icon-compose:before {
+	content: "\e624";
+}
+.icon-newspaper:before {
+	content: "\e625";
+}
+.icon-newspaper-alt:before {
+	content: "\e626";
+}
+.icon-clipboard2:before {
+	content: "\e64b";
+}
+.icon-calendar:before {
+	content: "\e648";
+}
+.icon-trash:before {
+	content: "\e61e";
+}
+.icon-trash-alt:before {
+	content: "\e61f";
+}
+.icon-grid:before {
+	content: "\e623";
+}
+.icon-grid-alt:before {
+	content: "\e621";
+}
+.icon-menu2:before {
+	content: "\e620";
+}
+.icon-list:before {
+	content: "\e622";
+}
+.icon-windows:before {
+	content: "\e62c";
+}
+.icon-browser:before {
+	content: "\e62b";
+}
+.icon-alarm:before {
+	content: "\e61c";
+}
+.icon-clock:before {
+	content: "\e61d";
+}
+.icon-attachment:before {
+	content: "\e61b";
+}
+.icon-settings:before {
+	content: "\e62a";
+}
+.icon-portfolio:before {
+	content: "\e609";
+}
+.icon-user2:before {
+	content: "\e60c";
+}
+.icon-users:before {
+	content: "\e60d";
+}
+.icon-chat2:before {
+	content: "\e60b";
+}
+.icon-comments:before {
+	content: "\e60a";
+}
+.icon-screen:before {
+	content: "\e633";
+}
+.icon-pin:before {
+	content: "\e62e";
+}
+.icon-pin-alt:before {
+	content: "\e62d";
+}
+.icon-globe:before {
+	content: "\e62f";
+}
+.icon-phone2:before {
+	content: "\e65d";
+}
+.icon-mail:before {
+	content: "\e65f";
+}
+.icon-paperplane:before {
+	content: "\e65e";
+}
+.icon-pencil2:before {
+	content: "\e65c";
+}
+.icon-paperclip:before {
+	content: "\e646";
+}
+.icon-reply:before {
+	content: "\e659";
+}
+.icon-forward2:before {
+	content: "\e65a";
+}
+.icon-vcard:before {
+	content: "\e647";
+}
+.icon-export:before {
+	content: "\e65b";
+}
+.icon-star:before {
+	content: "\e663";
+}
+.icon-star2:before {
+	content: "\e664";
+}
+.icon-chat:before {
+	content: "\e661";
+}
+.icon-comment:before {
+	content: "\e662";
+}
+.icon-house:before {
+	content: "\e666";
+}
+.icon-link2:before {
+	content: "\e658";
+}
+.icon-eye:before {
+	content: "\e660";
+}
+.icon-bolt:before {
+	content: "\e665";
+}
+.icon-clipboard:before {
+	content: "\e64e";
+}
+.icon-checkmark:before {
+	content: "\e63f";
+}
+.icon-cross:before {
+	content: "\e63e";
+}
+.icon-minus2:before {
+	content: "\e656";
+}
+.icon-plus2:before {
+	content: "\e657";
+}
+.icon-cross2:before {
+	content: "\e655";
+}
+.icon-minus:before {
+	content: "\e641";
+}
+.icon-plus:before {
+	content: "\e640";
+}
+.icon-info:before {
+	content: "\e64f";
+}
+.icon-help:before {
+	content: "\e650";
+}
+.icon-warning:before {
+	content: "\e651";
+}
+.icon-cycle:before {
+	content: "\e652";
+}
+.icon-cw:before {
+	content: "\e653";
+}
+.icon-ccw:before {
+	content: "\e654";
+}
+.icon-list2:before {
+	content: "\e64d";
+}
+.icon-add-to-list:before {
+	content: "\e64c";
+}
+.icon-disk:before {
+	content: "\e63b";
+}
+.icon-arrow-left:before {
+	content: "\e643";
+}
+.icon-arrow-down:before {
+	content: "\e642";
+}
+.icon-arrow-up:before {
+	content: "\e644";
+}
+.icon-arrow-right:before {
+	content: "\e645";
+}
+.icon-menu:before {
+	content: "\e649";
+}
